@@ -10,14 +10,23 @@
   <div class="container">
     <div></div>
     <form action="#">
-      <label for="username">Enter your username</label><br>
-        <input type="text" id="username"  placeholder="Your username" required ><br>
-        <label for="day">Day of Birth</label>
-        <input type="number" id="day" placeholder="Enter day of birth" required min="1" max="31"><br>
-        <label for="month">month of birth</label>
-        <input type="number" placeholder="Enter month" id="monthOfBirth" min="01" max="12"><br>
-        <label for="year">Year of birth</label>
-        <input type="number" placeholder="Enter year" id="yearOfBirth" min="1921" max="2021"><br>
+      <div>
+        <label for="username">Enter your username</label><br>
+          <input type="text" id="username"  placeholder="Your   username" required ><br>
+          <label for="day">Day of Birth</label>
+          <input type="number" id="day" placeholder="Enter day of   birth" required min="1" max="31"><br>
+          <label for="month">month of birth</label>
+          <input type="number" placeholder="Enter month"  id="monthOfBirth" min="01" max="12"><br>
+          <label for="year">Year of birth</label>
+          <input type="number" placeholder="Enter year"   id="yearOfBirth" min="1921" max="2021"><br>
+      </div>
+      <div class="">
+          <label for="">Gender</label><br>
+          <input type="radio" name="gender" id="male" value="male"  checked>Male <br>
+          <input type="radio" name="gender" id="female"   value="female" checked>Female <br>
+      </div>
+      <button><a onclick="validate()">Submit</a></button>
+      <button type="reset">Reset</button>
     </form>
 
   </div>
