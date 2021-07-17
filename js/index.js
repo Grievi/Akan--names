@@ -6,12 +6,22 @@ var validate = function(){
   var daysOfWeek =  ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
   var username = parseInt(document.getElementById("username").value);
+
   var day = parseInt(document.getElementById("day").value);
+
   var month = parseInt(document.getElementById("month").value);
+
   var year = parseInt(document.getElementById("year").value);
+
   var dateOfBirth = new Date(day + "/" + month + "/" + year);
+
   var results = dateOfBirth.getDay();
-  var outputValue = document.getElementById(outputValue);
+
+ 
+
+
+
+
 
 
 
