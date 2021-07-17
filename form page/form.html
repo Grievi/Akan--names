@@ -21,12 +21,16 @@
           <input type="number" placeholder="Enter year"   id="yearOfBirth" min="1921" max="2021"><br>
       </div>
       <div class="">
-          <label for="">Gender</label><br>
-          <input type="radio" name="gender" id="male" value="male"  checked>Male <br>
-          <input type="radio" name="gender" id="female"   value="female" checked>Female <br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br>
+        <br>
+        <input class="button" type="submit" name="SubmitButton" value="Submit" onClick="ValidateForm(this.form)">
+        <br>
+        <br>
+        <input class="button" type="reset" value="Reset"> 
       </div>
-      <button><a onclick="validate()">Submit</a></button>
-      <button type="reset">Reset</button>
     </form>
 
   </div>
