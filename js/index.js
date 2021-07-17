@@ -17,8 +17,22 @@ var validate = function(){
 
   var results = dateOfBirth.getDay();
 
- 
+  function validate(){
 
+    if ((form.username == "") || (form.username == NaN) || (form.username.length <= 2) || (username.lenght >= 20))
+    {
+      alert("enter valid username");
+      return false
+    }
+    
+    else
+    {
+      return true;
+    }
+
+  }
+
+ 
 
 
 
