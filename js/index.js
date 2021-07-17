@@ -16,10 +16,10 @@ var validate = function(){
   var dateOfBirth = new Date(day + "/" + month + "/" + year);
 
   var results = dateOfBirth.getDay();
-
+// -------------Username VAlidation onchange------------------->
   function validate(){
 
-    if ((form.username == "") || (form.username == NaN) || (form.username.length <= 2) || (username.lenght >= 20))
+    if ((document.getElementById("username")== "") || (document.getElementById("username") == NaN) || (document.getElementById("username").length <= 2) || (document.getElementById("username").length >= 20))
     {
       alert("enter valid username");
       return false
