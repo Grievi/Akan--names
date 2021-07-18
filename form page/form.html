@@ -4,36 +4,78 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Get your akan Name</title>
 </head>
 <body>
   <div class="container">
-    <div></div>
-    <form action="#" method="GET">
-      <div>
-        <label for="username">Enter your username</label><br>
-          <input type="text" id="username"  placeholder="Your   username" onchange="validate()"><br>
-          <label for="day">Day of Birth</label>
-          <input type="number" id="day" placeholder="Enter day of   birth" required min="1" max="31"><br>
-          <label for="month">month of birth</label>
-          <input type="number" placeholder="Enter month"  id="monthOfBirth" min="01" max="12"><br>
-          <label for="year">Year of birth</label>
-          <input type="number" placeholder="Enter year"   id="yearOfBirth" min="1921" max="2021"><br>
-      </div>
-      <div class="">
-        <label for="gender">Gender:</label>
-        <input type="radio" name="gender" value="Male"> Male
-        <input type="radio" name="gender" value="Female"> Female
-        <br>
-        <br>
-        <input class="button" type="submit" name="SubmitButton" value="Submit" onClick="Validate()">
-        <br>
-        <br>
-        <input class="button" type="reset" value="Reset"> 
-      </div>
-    </form>
+    <h2 class="text-center pb-1 animate__animated animate__fadeInRight animate__slower">Fill in the required fields</h2>
+        <p class="lead text-center animate__animated animate__fadeInLeft animate__slower">(in order to find out your <strong>Akan</strong> name)</p>
 
-  </div>
+        <!-- FORM -->
+    <form name="inputForm" class="form shadow-lg text-center" onsubmit="validate();" action="#">
+        <div class="form-group">
+
+            <input type="number" class="form-control" id="year"
+                placeholder="Year of Birth: 1996" name="year">
+        </div>
+        <div class="form-group">
+            <br>
+            <input type="number" class="form-control" id="month" placeholder="Month: 8" name="month">
+        </div>
+        <div class="form-group">
+            <br>
+            <input type="number" class="form-control" id="date" placeholder="Date of Birth: 5"
+                name="date">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label for="month">Choose Your Gender:</label>
+            <br>
+            <br>
+            <div class="form-check-inline">
+
+                <!-- GENDER SELECT -->
+
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="gender" id="male">&nbsp; Male
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="gender" id="female">&nbsp; Female
+                </label>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- GENERATE AKAN NAME -->
+        <button type="submit" class="btn btn-primary" onclick="AkanNameGen();">Generate <strong>Akan</strong> Name...</button>
+        <br>
+    </form>
+    
+    <br>
+
+    <div class="container">
+        <h2 class="output text-center">Output...<span class="animate__animated animate__flash animate__infinite animate__slower">|</span></h2>
+        <p class="names"></p>
+    </div>
+
+    <br>
+
+</div>
+
+
+<footer class="footer">
+<div class="footer-copyright text-center py-3">
+  <p>Akan name&copy;2021</p>
+</div>
+</footer>  
   <script src="../js/index.js"></script>
 </body>
 </html>
