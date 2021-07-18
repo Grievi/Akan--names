@@ -1,14 +1,15 @@
 *{
 font-family: 'Montserrat Alternates', sans-serif;
 box-sizing: border-box;;
+margin: 0px;
 }
 header{
-    height: 30vh;
+    height: 10vh;
     background: url(../assets/continent.jpg);
     background-repeat: repeat;
     background-image:linear-gradient(to right chocolate, brown) ;
     background-size: cover;
-    border-radius: 50% 100px 100px 0 0;
+
 
 }
 nav a{
@@ -23,8 +24,16 @@ nav a:hover{
     color: white;
     background-color:#fabc3c ;
 }
+.container{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
 img{
     border-radius: 50%;
+}
+.col{
+    display: flex;
 }
 
 .form
@@ -59,6 +68,10 @@ a #getName{
     color: #000000;
     border-radius: 3px
 }
+.getName{
+    display: flex;
+    justify-content:center ;
+}
 a #getName:hover{
     background-color: #fabc3c;
     border: 1px solid #fabc3c;
@@ -84,6 +97,6 @@ a #getName:hover{
 footer{
     display: flex;
     justify-content: center;
+    margin-bottom: 0px;
     
 }
-footer p{margin-bottom: 0px;}
