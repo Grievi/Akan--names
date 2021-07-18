@@ -1,38 +1,54 @@
-var validate = function(){
-  var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+const log = console.log;
 
-  var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama",];
+let masculineNames = [
+  "Kwasi",
+  "Kwadwo",
+  "Kwabena",
+  "Kwaku",
+  "Yaw",
+  "Kofi",
+  "Kwame",
+];
+let feminineNames = [
+  "Akosua",
+  "Adwoa",
+  "Abenaa",
+  "Akua",
+  " Yaa",
+  "Afua",
+  "Ama",
+];
+let daysOfTheWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let CC, YY, MM, DD, d, dayValue;
 
-  var daysOfWeek =  ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+// FORM VALIDATION
 
-  var username = parseInt(document.getElementById("username").value);
+// TARGET RADIO BUTTONS
 
-  var day = parseInt(document.getElementById("day").value);
+let genders = document.getElementsByName("gender");
 
-  var month = parseInt(document.getElementById("month").value);
+const validate = () => {
+  // CHECK INPUT VALUE FOR YEAR
 
-  var year = parseInt(document.getElementById("year").value);
-
-  var dateOfBirth = new Date(day + "/" + month + "/" + year);
-
-  var results = dateOfBirth.getDay();
-// -------------Username VAlidation onchange------------------->
-  function validate(){
-
-    if ((document.getElementById("username")== "") || (document.getElementById("username") == NaN) || (document.getElementById("username").length <= 2) || (document.getElementById("username").length >= 20))
-    {
-      alert("enter valid username");
-      return false
-    }
-    
-    else
-    {
-      return true;
-    }
-
+  if (
+    document.inputForm.year.value === "" ||
+    document.inputForm.year.value.length !== 4 ||
+    document.inputForm.year.value > 2100 ||
+    document.inputForm.year.value <= 1900
+  ) {
+    alert("Please enter a valid year...");
+    document.inputForm.year.focus();
+    return false;
   }
 
- 
 
 
 
