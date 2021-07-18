@@ -19,6 +19,13 @@ nav a{
     background-color: black;
     border-radius: 3px;
 }
+nav a:hover{
+    color: white;
+    background-color:#fabc3c ;
+}
+img{
+    border-radius: 50%;
+}
 
 .form
 {
@@ -44,6 +51,20 @@ input:active
 
 
 /* BUTTON STYLING */
+
+
+a #getName{
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 3px
+}
+a #getName:hover{
+    background-color: #fabc3c;
+    border: 1px solid #fabc3c;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    color: white;
+}
 
 .btn-primary
 {
