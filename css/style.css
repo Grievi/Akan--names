@@ -1,0 +1,12 @@
+*{
+font-family: 'Montserrat Alternates', sans-serif;
+box-sizing: border-box;;
+}
+header{
+    height: 30vh;
+    /* background: url(../assets/landing\ page.jpg); */
+    background-color: linear-gradient(to right,rgba #f9b02f, #23120a, #ff890e);
+    background-size: cover;
+    border-radius: 50% 100px 100px 0 0;
+
+}
