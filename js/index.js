@@ -62,6 +62,37 @@ const validate = () => {
       return false;
     }
 
+  // CHECK INPUT VALUE FOR DATE
+  else if (
+    document.inputForm.date.value === "" ||
+    isNaN(document.inputForm.month.value) ||
+    document.inputForm.month.value.length !== 2 ||
+    document.inputForm.date.value > 31 ||
+    document.inputForm.date.value <= 0
+  ) {
+    alert("Please enter a valid date...");
+    document.inputForm.day.focus();
+    return false;
+  }
+
+  // CHECK IF THE USER HAS SELECTED A GENDER
+  else if (genders[0].checked === false && genders[1].checked === false) {
+    alert("Please Select a gender...");
+    return false;
+  } else {
+    return true;
+  }
+};
+
+
+
+
+
+
+
+
+
+
 
 
 
