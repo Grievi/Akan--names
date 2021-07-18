@@ -2,6 +2,7 @@
 font-family: 'Montserrat Alternates', sans-serif;
 box-sizing: border-box;;
 margin: 0px;
+font-size: 48px;
 }
 header{
     height: 10vh;
@@ -31,14 +32,23 @@ nav a:hover{
 }
 img{
     border-radius: 50%;
+    height:600px;
+    width: 600px;
 }
 .col{
     display: flex;
 }
+.col p{
+    display: inline-block;
+}
+/* .formu{
+    display: flex;
+    justify-content: center;
+} */
 
 .form
 {
-    max-width: 300px;
+    max-width: 1000px;
     margin: auto;
     padding: 28px;
 }
@@ -66,7 +76,8 @@ a #getName{
     background-color: transparent;
     border: 1px solid #000000;
     color: #000000;
-    border-radius: 3px
+    border-radius: 3px;
+    margin-bottom:0px
 }
 .getName{
     display: flex;
