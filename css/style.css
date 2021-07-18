@@ -4,9 +4,65 @@ box-sizing: border-box;;
 }
 header{
     height: 30vh;
-    /* background: url(../assets/landing\ page.jpg); */
-    background-color: linear-gradient(to right,rgba #f9b02f, #23120a, #ff890e);
+    background: url(../assets/continent.jpg);
+    background-repeat: repeat;
+    background-image:linear-gradient(to right chocolate, brown) ;
     background-size: cover;
     border-radius: 50% 100px 100px 0 0;
 
 }
+nav a{
+    text-decoration: none;
+    color: #fabc3c;
+    box-sizing: border-box;
+    box-shadow: black 2px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+.form
+{
+    max-width: 300px;
+    margin: auto;
+    padding: 28px;
+}
+
+.form-control:active
+{
+    border: 1px solid #fabc3c;
+}
+
+.form-control:target
+{
+    border: 1px solid #fabc3c;
+}
+
+input:active
+{
+    border: 1px solid #fabc3c;
+}
+
+
+/* BUTTON STYLING */
+
+.btn-primary
+{
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 3px;
+}
+
+.btn-primary:hover
+{
+    background-color: #fabc3c;
+    border: 1px solid #fabc3c;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    color: white;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    
+}
+footer p{margin-bottom: 0px;}
