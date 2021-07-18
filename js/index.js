@@ -84,6 +84,107 @@ const validate = () => {
   }
 };
 
+// GET DAY VALUE
+
+const getDayValue = () => {
+  year = document.querySelector("#year").value;
+  CC = parseInt(year.substring(0, 2));
+  YY = parseInt(year.substring(2, 4));
+  MM = parseInt(document.querySelector("#month").value);
+  DD = parseInt(document.querySelector("#date").value);
+
+  // REGEX FOR DATE VALIDATION
+
+  d = (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7;
+  log(d);
+  return Math.round(d);
+};
+
+// VERIFY SELECTED GENDER
+
+const genderIdentifier = () => {
+  var genders = document.getElementsByName("gender");
+
+  if (genders[0].checked === true) {
+    var gender = "male";
+  } else if (genders[1].checked === true) {
+    var gender = "female";
+  } else {
+    return false;
+  }
+  switch (gender) {
+    case "male":
+      if (dayValue === 1) {
+        alert(
+          `You were born on  ${daysOfTheWeek[0]} and your Akan name is ${masculineNames[0]}`
+        );
+      } else if (dayValue === 2) {
+        alert(
+          `You were born on ${daysOfTheWeek[1]} and your Akan name is ${masculineNames[1]}`
+        );
+      } else if (dayValue === 3) {
+        alert(
+          `You were born on ${daysOfTheWeek[2]} and your Akan name is ${masculineNames[2]}`
+        );
+      } else if (dayValue === 4) {
+        alert(
+          `You were born on ${daysOfTheWeek[3]} and your Akan name is ${masculineNames[3]}`
+        );
+      } else if (dayValue === 5) {
+        alert(
+          `You were born on ${daysOfTheWeek[4]} and your Akan name is ${masculineNames[4]}`
+        );
+      } else if (dayValue === 6) {
+        alert(
+          `You were born on ${daysOfTheWeek[5]} and your Akan name is ${masculineNames[5]}`
+        );
+      } else if (dayValue === -0) {
+        alert(
+          `You were born on ${daysOfTheWeek[6]} and your Akan name is ${masculineNames[6]}`
+        );
+      }
+      break;
+    case "female":
+      if (dayValue === 1) {
+        alert(
+          `You were born on ${daysOfTheWeek[0]} and your Akan name is ${feminineNames[0]}`
+        );
+      } else if (dayValue === 2) {
+        alert(
+          `You were born on ${daysOfTheWeek[1]} and your Akan name is ${feminineNames[1]}`
+        );
+      } else if (dayValue === 3) {
+        alert(
+          `You were born on ${daysOfTheWeek[2]} and your Akan name is ${feminineNames[2]}`
+        );
+      } else if (dayValue === 4) {
+        alert(
+          `You were born on ${daysOfTheWeek[3]} and your Akan name is ${feminineNames[3]}`
+        );
+      } else if (dayValue === 5) {
+        log(
+          `You were born on ${daysOfTheWeek[4]} and your Akan name is ${feminineNames[4]}`
+        );
+      } else if (dayValue === 6) {
+        alert(
+          `You were born on ${daysOfTheWeek[5]} and your Akan name is ${feminineNames[5]}`
+        );
+      } else if (dayValue === -0) {
+        alert(
+          `You were born on ${daysOfTheWeek[6]} and your Akan name is ${feminineNames[6]}`
+        );
+      }
+      break;
+    default:
+  }
+};
+
+// GENERATE AKAN NAME
+
+const AkanNameGen = () => {
+  dayValue = getDayValue();
+  genderIdentifier();
+};
 
 
 
@@ -99,4 +200,3 @@ const validate = () => {
 
 
 
-}
