@@ -49,6 +49,18 @@ const validate = () => {
     return false;
   }
 
+    // CHECK INPUT VALUE FOR MONTH
+    else if (
+      document.inputForm.month.value === "" ||
+      isNaN(document.inputForm.month.value) ||
+      document.inputForm.month.value.length !== 2 ||
+      document.inputForm.month.value > 12 ||
+      document.inputForm.month.value <= 0
+    ) {
+      alert("Please enter a valid month(range 1 - 12)");
+      document.inputForm.month.focus();
+      return false;
+    }
 
 
 
